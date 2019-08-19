@@ -9,6 +9,7 @@ import { Navigator } from './src/services/navigation';
 import {
   AndroidBackHandler, ErrorHandler, SystemMessageHandler, NetworkHandler, LocationHandler,
 } from './src/services/handlers';
+console.disableYellowBox = true
 // Persistor & Store
 const { persistor, store } = configureStore;
 /**
