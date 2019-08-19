@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Text, View } from "react-native";
 
-const HomeScreen = (props) => {
+const TaskDetailsScreen = (props) => {
 	const {
 
 	} = props;
@@ -13,14 +13,11 @@ const HomeScreen = (props) => {
 	);
 };
 
-HomeScreen.propTypes = {
-	stars: PropTypes.number,
-	ratings: PropTypes.string,
+
+TaskDetailsScreen.propTypes = {
 };
 
-HomeScreen.defaultProps = {
-	stars: 5,
-	ratings: "Hellooo",
+TaskDetailsScreen.defaultProps = {
 };
 
-export default HomeScreen;
+export default TaskDetailsScreen;

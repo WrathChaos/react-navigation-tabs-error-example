@@ -2,7 +2,7 @@ import thunk from 'redux-thunk';
 import {createStore, applyMiddleware} from 'redux';
 import {persistStore, persistCombineReducers} from 'redux-persist';
 import AsyncStorage from '@react-native-community/async-storage';
-import reducers from '../reducers';
+import reducers from '../reducers/';
 
 const nextRootReducer = require('../reducers/index');
 

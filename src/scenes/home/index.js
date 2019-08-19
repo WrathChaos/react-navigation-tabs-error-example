@@ -13,14 +13,11 @@ const HomeScreen = (props) => {
 	);
 };
 
+
 HomeScreen.propTypes = {
-	stars: PropTypes.number,
-	ratings: PropTypes.string,
 };
 
 HomeScreen.defaultProps = {
-	stars: 5,
-	ratings: "Hellooo",
 };
 
 export default HomeScreen;

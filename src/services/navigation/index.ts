@@ -1,7 +1,8 @@
 import {createBottomTabNavigator} from 'react-navigation';
 // Screens
-import HomeScreen from '../../screens/home/HomeScreen';
-import VideoScreen from '../../screens/video/VideoScreen';
+import HomeScreen from '../../scenes/home';
+import TaskDetailsScreen from '../../scenes/task-details';
+
 
 const defaultNavigationOptions = {
   tabBarVisible: false,
@@ -11,7 +12,7 @@ const defaultNavigationOptions = {
 export const Navigator = createBottomTabNavigator(
   {
     home: HomeScreen,
-    video: VideoScreen,
+    taskDetails: TaskDetailsScreen,
   },
   {
     defaultNavigationOptions,
