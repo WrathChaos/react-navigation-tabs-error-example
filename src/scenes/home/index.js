@@ -17,6 +17,7 @@ const HomeScreen = (props) => {
 				latitudeDelta: 8.5,
 				longitudeDelta: 8.5,
 			}}
+			clusterStyle={{ width: 100, height: 100, backgroundColor: "blue" }}
 			style={{ width: 400, height: 800 }}>
 			<Marker coordinate={{ latitude: 52.0, longitude: 18.2 }} image={markerImage} />
 			<Marker coordinate={{ latitude: 52.4, longitude: 18.7 }} image={markerImage} />
