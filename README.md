@@ -1,3 +1,3 @@
-### Documentation
+## Documentation
 
-[Navigation Doc](docs/Navigation.md)
+#### [Navigation Doc](docs/Navigation.md)
