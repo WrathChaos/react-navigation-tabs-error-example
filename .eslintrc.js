@@ -1,20 +1,12 @@
+'use strict';
+
 module.exports = {
   parser: 'babel-eslint',
-  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  extends: 'airbnb',
   plugins: ['react', 'react-native'],
   env: {
     jest: true,
     'react-native/react-native': true,
-  },
-  settings: {
-    'import/resolver': {
-      node: {
-        paths: ['src'],
-      },
-    },
-  },
-  ecmaFeatures: {
-    jsx: true,
   },
   rules: {
     // allow js file extension
@@ -25,13 +17,7 @@ module.exports = {
       },
     ],
     // for post defining style object in react-native
-    'no-use-before-define': [
-      'error',
-      {
-        variables: false,
-      },
-    ],
-    'import/no-unresolved': [2, {caseSensitive: false}],
+    'no-use-before-define': ['error', {variables: false}],
     // react-native rules
     'react-native/no-unused-styles': 2,
     'react-native/split-platform-components': 2,
