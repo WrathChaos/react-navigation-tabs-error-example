@@ -1,74 +1,41 @@
 module.exports = {
-	parser:
-		'babel-eslint',
-	parserOptions: {
-		ecmaVersion: 6,
-		sourceType:
-			'module',
-		ecmaFeatures: {
-			jsx: true,
-			modules: true,
-			experimentalObjectRestSpread: true,
-		},
-	},
-	plugins: [
-		'prettier',
-		'react',
-	],
-	extends: [
-		'airbnb',
-		'prettier/react',
-	],
-	rules: {
-		'class-methods-use-this':
-			'off',
-		'comma-dangle': 0,
-		indent: [
-			2,
-			'tab',
-		],
-		'react/jsx-uses-vars': 1,
-		'react/display-name': 1,
-		'no-unused-vars':
-			'warn',
-		'no-console': 0,
-		'no-unexpected-multiline':
-			'warn',
-		quotes:
-			'off',
-		'react/destructuring-assignment':
-			'off',
-		'react/jsx-no-bind':
-			'off',
-		'react/jsx-filename-extension':
-			'off',
-		'react/prefer-stateless-function':
-			'off',
-		'react/prop-types':
-			'off',
-		'no-alert':
-			'off',
-		'no-tabs': 0,
-		'linebreak-style': 0,
-		'no-underscore-dangle': 0,
-		'react/no-string-refs': 0,
-		eqeqeq:
-			'error',
-	},
-	settings: {
-		react: {
-			pragma:
-				'React',
-			version:
-				'16.8.6',
-		},
-	},
-	globals: {
-		navigator: true,
-		alert: true,
-		fetch: true,
-		coordinate: true,
-		isFunction: true,
-		FormData: true,
-	},
+  parser: 'babel-eslint',
+  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  plugins: ['react', 'react-native'],
+  env: {
+    jest: true,
+    'react-native/react-native': true,
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        paths: ['src'],
+      },
+    },
+  },
+  ecmaFeatures: {
+    jsx: true,
+  },
+  rules: {
+    // allow js file extension
+    'react/jsx-filename-extension': [
+      'error',
+      {
+        extensions: ['.js', '.jsx'],
+      },
+    ],
+    // for post defining style object in react-native
+    'no-use-before-define': [
+      'error',
+      {
+        variables: false,
+      },
+    ],
+    'import/no-unresolved': [2, {caseSensitive: false}],
+    // react-native rules
+    'react-native/no-unused-styles': 2,
+    'react-native/split-platform-components': 2,
+    'react-native/no-inline-styles': 2,
+    'react-native/no-raw-text': 2,
+  },
 };

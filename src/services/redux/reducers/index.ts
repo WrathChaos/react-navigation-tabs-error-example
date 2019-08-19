@@ -1,11 +1,7 @@
-/**
- * ? Just Example
- */
+import taskReducer from './task-reducer';
+import appStateReducer from './appState';
 
-// import markerReducer from './MarkerReducer';
-// import mapReducer from '../../../modules/main-modules/main/components/map/services/reducers/MapReducer';
-
-// export default {
-//   markerReducer,
-//   mapReducer,
-// };
+export default {
+    taskReducer,
+    appStateReducer
+}
