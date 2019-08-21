@@ -2,22 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Text, View } from "react-native";
 
-const TaskDetailsScreen = (props) => {
-	const {
-
-	} = props;
-	return (
-		<View>
-			<Text>New Component</Text>
-		</View>
-	);
+const TaskDetailsScreen = props => {
+  const {} = props;
+  return (
+    <View>
+      <Text>New Component</Text>
+    </View>
+  );
 };
 
+TaskDetailsScreen.propTypes = {};
 
-TaskDetailsScreen.propTypes = {
-};
-
-TaskDetailsScreen.defaultProps = {
-};
+TaskDetailsScreen.defaultProps = {};
 
 export default TaskDetailsScreen;
