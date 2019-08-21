@@ -1,15 +1,15 @@
-import thunk from 'redux-thunk';
-import {createStore, applyMiddleware} from 'redux';
-import {persistStore, persistCombineReducers} from 'redux-persist';
-import AsyncStorage from '@react-native-community/async-storage';
-import reducers from '../reducers/';
+import thunk from "redux-thunk";
+import { createStore, applyMiddleware } from "redux";
+import { persistStore, persistCombineReducers } from "redux-persist";
+import AsyncStorage from "@react-native-community/async-storage";
+import reducers from "../reducers";
 
-const nextRootReducer = require('../reducers/index');
+const nextRootReducer = require("../reducers/index");
 
 const config = {
-  key: 'root',
+  key: "root",
   storage: AsyncStorage,
-  blacklist: [],
+  blacklist: []
 };
 
 const reducer = persistCombineReducers(config, reducers);
@@ -20,12 +20,12 @@ function configureStore(initialState = {}) {
   // Fix the hot reload option
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
-    module.hot.accept('../reducers', () => {
+    module.hot.accept("../reducers", () => {
       store.replaceReducer(nextRootReducer);
     });
   }
   const persistor = persistStore(store);
-  return {persistor, store};
+  return { persistor, store };
 }
 
 export default configureStore();
