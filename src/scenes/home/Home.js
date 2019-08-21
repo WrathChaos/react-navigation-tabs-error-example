@@ -22,7 +22,19 @@ const HomeScreen = props => {
         latitudeDelta: 8.5,
         longitudeDelta: 8.5
       }}
-      clusterStyle={{ width: 100, height: 100, backgroundColor: "blue" }}
+      clusterStyle={{
+        width: 50,
+        height: 50,
+        backgroundColor: "white",
+        borderRadius: 25,
+        alignItems: "center",
+        borderColor: "pink",
+        borderWidth: 2,
+        justifyContent: "center"
+      }}
+      clusterTextStyle={{
+        color: "pink"
+      }}
       style={{ width: 400, height: 800 }}
     >
       <Marker
