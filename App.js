@@ -1,17 +1,15 @@
 import React from "react";
-import { View, StatusBar, YellowBox } from "react-native";
+import { View, StatusBar } from "react-native";
 import { Provider } from "react-redux";
-import { PersistGate } from "redux-persist/es/integration/react";
 import { createAppContainer } from "react-navigation";
-import NavigationService from "react-navigation-helpers";
-import configureStore from "./src/services/redux/store";
 import { Navigator } from "./src/services/navigation";
+import configureStore from "./src/services/redux/store";
+import NavigationService from "react-navigation-helpers";
+import { PersistGate } from "redux-persist/es/integration/react";
 import {
-  AndroidBackHandler,
   ErrorHandler,
-  SystemMessageHandler,
-  NetworkHandler,
-  LocationHandler
+  AndroidBackHandler,
+  SystemMessageHandler
 } from "./src/services/handlers";
 
 console.disableYellowBox = true;
