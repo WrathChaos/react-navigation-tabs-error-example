@@ -4,7 +4,6 @@ import { TASK_LIST } from "../types/task-action-types";
 
 export default function fetchTaskList() {
   return dispatch => {
-    console.log("WHAAAT");
     Api.get(GET.TASK_LIST)
       .then(res => {
         console.log(res);
