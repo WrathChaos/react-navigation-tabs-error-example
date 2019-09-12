@@ -21,22 +21,14 @@ const App = () => {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-        <ErrorHandler>
-          <SystemMessageHandler>
-            <View style={{ flex: 1 }}>
-              <StatusBar barStyle="dark-content" />
-              <MainNavigator
-                ref={navigatorRef =>
-                  NavigationService.setGlobalLevelNavigator(navigatorRef)
-                }
-              />
-            </View>
-            {/* FIXME: Fix these handlers from Redux */}
-            {/* <LocationHandler /> */}
-            {/* <NetworkHandler /> */}
-            <AndroidBackHandler />
-          </SystemMessageHandler>
-        </ErrorHandler>
+        <View style={{ flex: 1 }}>
+          <StatusBar barStyle="dark-content" />
+          <MainNavigator
+            ref={navigatorRef =>
+              NavigationService.setGlobalLevelNavigator(navigatorRef)
+            }
+          />
+        </View>
       </PersistGate>
     </Provider>
   );

@@ -18,14 +18,12 @@ const HomeScreen = props => {
 
   renderMarkers = () => {
     const markerList = [];
-    const taskList = response && response.data;
-    response && response.data && console.log("Data: ", response.data.length);
-    taskList && console.log("TaskList: ", taskList.length);
-    _.each(taskList, task => {
-      const { geometry } = task;
+    const list = response && response.data;
+    _.each(list, item => {
+      const { geometry } = item;
       markerList.push(
         <Marker
-          key={task._id}
+          key={item._id}
           coordinate={{
             latitude:
               (geometry && geometry.features[0].geometry.coordinates[0]) ||
@@ -38,13 +36,9 @@ const HomeScreen = props => {
         />
       );
     });
-    console.log("MarkerList: ", markerList.length);
     return markerList;
   };
 
-  response && console.log(response);
-  response && console.log(response.data);
-  response && console.log(_.toArray(response.data).length);
   return (
     <MapView
       region={{

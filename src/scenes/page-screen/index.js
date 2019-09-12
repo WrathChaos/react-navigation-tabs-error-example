@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Text, View } from "react-native";
 
-const TaskDetailsScreen = props => {
+const PageScreen = props => {
   const {} = props;
   return (
     <View>
@@ -11,8 +11,8 @@ const TaskDetailsScreen = props => {
   );
 };
 
-TaskDetailsScreen.propTypes = {};
+PageScreen.propTypes = {};
 
-TaskDetailsScreen.defaultProps = {};
+PageScreen.defaultProps = {};
 
-export default TaskDetailsScreen;
+export default PageScreen;
