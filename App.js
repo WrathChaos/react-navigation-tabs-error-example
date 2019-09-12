@@ -6,11 +6,6 @@ import { Navigator } from "./src/services/navigation";
 import configureStore from "./src/services/redux/store";
 import NavigationService from "react-navigation-helpers";
 import { PersistGate } from "redux-persist/es/integration/react";
-import {
-  ErrorHandler,
-  AndroidBackHandler,
-  SystemMessageHandler
-} from "./src/services/handlers";
 
 console.disableYellowBox = true;
 // Persistor & Store
