@@ -60,7 +60,7 @@ const HomeScreen = props => {
       clusterTextStyle={{
         color: "pink"
       }}
-      style={{ width: 400, height: 800 }}
+      style={{ flex: 1 }}
     >
       {renderMarkers()}
     </MapView>
