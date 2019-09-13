@@ -2,5 +2,28 @@
   "presets": [
     "module:metro-react-native-babel-preset",
     "module:react-native-dotenv"
-  ]
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        [
+          "module-resolver",
+          {
+            "root": ["./src"],
+            "alias": [
+              { "shared-components": "./src/shared/components" },
+              { "config": "./src/config" },
+              { "services": "./src/services" },
+              { "assets": "./assets" },
+              { "theme": "./src/theme" },
+              { "fonts": "./src/theme/fonts" },
+              { "colors": "./src/theme/colors" },
+              { "utils": "./src/utils" },
+              { "screens": "./src/screens" }
+            ]
+          }
+        ]
+      ]
+    }
+  }
 }

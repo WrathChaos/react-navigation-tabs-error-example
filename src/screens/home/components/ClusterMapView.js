@@ -1,13 +1,14 @@
 import _ from "lodash";
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { Marker } from "react-native-maps";
-import ApiRequest from "../../services/api/hooks/redux";
 import MapView from "react-native-map-clustering";
+import ApiRequest from "../../services/api/hooks/redux";
 import { BASE_URL, GET } from "../../services/api/Api.constant";
 
 const markerImage = require("../../assets/location-marker.png");
 
-const HomeScreen = props => {
+const ClusterMapView = props => {
   const [{ status, response }, makeRequest] = ApiRequest(BASE_URL + GET, {
     verb: "get"
   });
@@ -15,7 +16,7 @@ const HomeScreen = props => {
   useEffect(() => {
     makeRequest();
   }, []);
-
+  const { example } = props;
   renderMarkers = () => {
     const markerList = [];
     const list = response && response.data;
@@ -38,7 +39,6 @@ const HomeScreen = props => {
     });
     return markerList;
   };
-
   return (
     <MapView
       region={{
@@ -67,4 +67,12 @@ const HomeScreen = props => {
   );
 };
 
-export default HomeScreen;
+ClusterMapView.propTypes = {
+  example: PropTypes.number
+};
+
+ClusterMapView.defaultProps = {
+  example: 5
+};
+
+export default ClusterMapView;

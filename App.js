@@ -2,8 +2,8 @@ import React from "react";
 import { View, StatusBar } from "react-native";
 import { Provider } from "react-redux";
 import { createAppContainer } from "react-navigation";
-import { Navigator } from "./src/services/navigation";
-import configureStore from "./src/services/redux/store";
+import { Navigator } from "services/navigation";
+import configureStore from "services/redux/store";
 import NavigationService from "react-navigation-helpers";
 import { PersistGate } from "redux-persist/es/integration/react";
 
