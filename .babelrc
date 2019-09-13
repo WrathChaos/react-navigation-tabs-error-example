@@ -14,7 +14,7 @@
               { "shared-components": "./src/shared/components" },
               { "config": "./src/config" },
               { "services": "./src/services" },
-              { "assets": "./assets" },
+              { "assets": "./src/assets" },
               { "theme": "./src/theme" },
               { "fonts": "./src/theme/fonts" },
               { "colors": "./src/theme/colors" },

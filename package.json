@@ -25,6 +25,7 @@
     "react-native-custom-icon": "0.0.3",
     "react-native-dotenv": "^0.2.0",
     "react-native-dynamic-vector-icons": "^0.2.1",
+    "react-native-floating-action-button": "^0.1.14",
     "react-native-gesture-handler": "^1.4.1",
     "react-native-map-clustering": "git+https://github.com/WrathChaos/react-native-map-clustering.git",
     "react-native-maps": "^0.25.0",
