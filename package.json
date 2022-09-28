@@ -12,7 +12,7 @@
     "@freakycoder/react-native-helpers": "0.0.21",
     "@react-native-community/async-storage": "^1.6.1",
     "@react-native-community/netinfo": "^4.2.1",
-    "apisauce": "^1.1.0",
+    "apisauce": "^1.1.5",
     "axios": "^0.21.2",
     "lodash": "^4.17.21",
     "prop-types": "^15.7.2",
