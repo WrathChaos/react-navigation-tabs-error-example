@@ -30,7 +30,7 @@
     "react-native-map-clustering": "git+https://github.com/WrathChaos/react-native-map-clustering.git",
     "react-native-maps": "^0.25.0",
     "react-native-material-ripple": "^0.8.0",
-    "react-native-reanimated": "^1.2.0",
+    "react-native-reanimated": "^2.10.0",
     "react-native-screens": "^2.0.0-alpha.3",
     "react-native-snackbar": "^2.0.2",
     "react-native-vector-icons": "^6.6.0",
